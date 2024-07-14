@@ -1,0 +1,58 @@
+#+TITLE: Skeletyl FiNeX (Colemak DHm)
+#+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
+#+DATE: 14/07/2024
+#+STARTUP: inlineimages
+#+STARTUP: nofold
+
+* Table of contents :TOC:
+- [[#customized-keymap-for-skeletyl-by-leonardo-finex-finetti][Customized keymap for Skeletyl by Leonardo (FiNeX) Finetti]]
+- [[#features][Features]]
+- [[#layout][Layout]]
+- [[#layout-1][Layout]]
+  - [[#color-legend][Color Legend]]
+- [[#instructions][Instructions]]
+- [[#changelog][Changelog]]
+
+* Customized keymap for Skeletyl by Leonardo (FiNeX) Finetti
+This keymap inherits the previous Dactyl Manuform layout reduced to a 36 keys.
+
+* Features
+- Layout: Colemak DHm.
+- Added redundant ~Space~, ~Tab~ and ~Enter~ keys. I like to have this keys on both halves.
+- Added macro to print custom strings (~->~, ~=>~, ~../~, ~//~, ~:-)~ and ~:-(~.
+- No media layer
+- "Print Screen" key.
+- ~Alt~, ~Ctrl~, ~Gui~, ~Shift~ and ~Hypr~ on home keys. ~AltGr~ on bottom home row.
+- Added specific layout for "AwesomeWM" window manager.
+- Added clipboard and undo/redo macro.
+- Mouse layer.
+
+* Layout
+This keyboard layout is intended to be used with English (US, intl, with dead keys) settings on PC.
+
+On GNU/Linux systems use the following command to set the keyboard layout:
+#+begin_src sh
+setxkbmap -layout us -variant intl -option eurosign:e
+#+end_src
+
+* Layout
+#+CAPTION: Redox FiNeX layout
+[[https://raw.githubusercontent.com/finex/skeletyl-finex/main/images/skeletyl-finex.png]]
+** Color Legend
+- Green: Symbols
+- Yellow: Navigation
+- Cyan: Numbers
+- Orange: Functions
+- Pink: Mouse
+
+* Instructions
+To compile and flash the firmware just use the following command from the QMK main directory and flash on both halves. Please use bastardkb qmk repository.
+
+#+begin_src sh
+qmk compile -c -kb bastardkb/skeletyl -km finex
+#+end_src
+
+
+* Changelog
+- 2024/07/14
+  First release (fork from cheapino/dactyl).
